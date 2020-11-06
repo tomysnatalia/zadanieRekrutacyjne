@@ -1,0 +1,15 @@
+/* Splash */
+.splash {
+  height: 100vh;
+  position: relative;
+  background-image: url("https://i.postimg.cc/MZyN82v2/shutterstock-1105116683-4x.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* About */
+.about {
+  background-image: url("https://i.postimg.cc/QxZDpJWs/shutterstock-373266265-4x.jpg");
+}
+/*# sourceMappingURL=style.css.map */
