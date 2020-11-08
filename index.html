@@ -5,7 +5,9 @@
   <meta charset="UTF-8">
   <title>twojeFinanse</title>
   <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
   <link rel="stylesheet" href="vendor/bootstrap-grid.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -14,39 +16,31 @@
   <div class="container">
     <nav class="nav">
       <div class="logo"><img src="https://i.postimg.cc/mD2NFd0m/4-layers.png"></div>
-      <ul>
+      <ul id="links">
         <li><a href="#"> o nas </a>
-          <ul>
+        </li>
+        <li><a href="#offer" class="sublinked"> oferta <i class="fas fa-caret-down"></i> </a>
+          <ul id="offer">
             <li><a href="#"> link1 </a></li>
             <li><a href="#"> link2 </a></li>
           </ul>
         </li>
-        <li><a href="#"> oferta </a>
-          <ul>
-            <li><a href="#"> link1 </a></li>
-            <li><a href="#"> link2 </a></li>
-          </ul>
-        </li>
-        <li><a href="#"> towarzystwa ubezpieczeń </a>
-          <ul>
+        <li><a href="#companies" class="sublinked"> towarzystwa ubezpieczeń <i class="fas fa-caret-down"></i></a>
+          <ul id="companies">
             <li><a href="#"> link1 </a></li>
             <li><a href="#"> link2 </a></li>
           </ul>
         </li>
         <li><a href="#"> dołącz do nas </a>
-          <ul>
+        </li>
+        <li><a href="#useful" class="sublinked"> przydatne materiały <i class="fas fa-caret-down"></i></a>
+          <ul id="useful">
             <li><a href="#"> link1 </a></li>
             <li><a href="#"> link2 </a></li>
           </ul>
         </li>
-        <li><a href="#"> przydatne materiały </a>
-          <ul>
-            <li><a href="#"> link1 </a></li>
-            <li><a href="#"> link2 </a></li>
-          </ul>
-        </li>
-        <li><a href="#"> oddziały </a>
-          <ul>
+        <li><a href="#locations" class="sublinked"> oddziały <i class="fas fa-caret-down"></i></a>
+          <ul id="locations">
             <li><a href="#"> link1 </a></li>
             <li><a href="#"> link2 </a></li>
             <li><a href="#"> link3 </a></li>
@@ -54,14 +48,16 @@
           </ul>
         </li>
       </ul>
+      <a href="#" class="icon mobile-nav" onclick="myFunction()">
+        <i class="mobile-nav-icon fas fa-bars"></i>
+      </a>
     </nav>
   </div>
 
   <header class="splash">
     <div class="container">
-
       <div class="text-container">
-        <h4 class="text-container-subtitle"> Podaj dane kontaktowe, a my przygtujemy najlepszą ofertę </h4>
+        <h4 class="text-container-subtitle"> Podaj dane kontaktowe, a my przygotujemy najlepszą ofertę </h4>
         <input type="text" placeholder="Imię i nazwisko" id="name&surname" required>
         <input type="text" placeholder="Adres e-mail" id="mail" required>
         <input type="text" placeholder="Nr telefonu" id="phone" required>
@@ -87,29 +83,30 @@
         </ul>
         <a href="#" class="btn btn-one"> Wyślij</a>
       </div>
-    </div>
 
+    </div>
     <div class="splash-inner">
       <div class="inner-container">
         <h2 class="page-title"> Ubezpieczenia majątkowe </h2>
         <h2 class="page-subtitle"> Skontaktuj się z nami i skorzystaj ze specjalniej oferty! </h2>
       </div>
     </div>
-
   </header>
 
   <section class="about">
     <div class="container">
       <div class="box">
-        <h4 class="section-title"> Ubezpieczenia majątkowe </h5>
-          <h5 class="section-subtitle"> Co obejmują? </h5>
-          <p><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nibh augue, suscipit a, scelerisque sed,
-              lacinia in, mi. Cras vel lorem. Etiam pellentesque aliquet tellus.</b>
-            <br> Phasellus pharetra nulla acdiam.
-            Quisque semper justo at risus. Donec venenatis, turpis vel hendrerit
-            interdum, dui ligula ultricies purus, sed posuere libero dui id orci. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nibh augue, suscipit a, scelerisque sed,
-            lacinia in, mi. Cras vel lorem. Etiam pellentesque aliquet tellus.</p>
-          <a href="#" class="btn btn-two"> Zamów ubezpieczenie </a>
+        <h4 class="section-title"> Ubezpieczenia majątkowe </h4>
+        <h5 class="section-subtitle"> Co obejmują? </h5>
+        <p class="bolded-text"><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nibh augue, suscipit a,
+            scelerisque sed,
+            lacinia in, mi. Cras vel lorem. Etiam pellentesque aliquet tellus.</b></p>
+        <p>Phasellus pharetra nulla acdiam.
+          Quisque semper justo at risus. Donec venenatis, turpis vel hendrerit
+          interdum, dui ligula ultricies purus, sed posuere libero dui id orci. Lorem ipsum dolor sit amet, consectetur
+          adipiscing elit. Proin nibh augue, suscipit a, scelerisque sed,
+          lacinia in, mi. Cras vel lorem. Etiam pellentesque aliquet tellus.</p>
+        <a href="#" class="btn btn-two"> Zamów ubezpieczenie </a>
       </div>
     </div>
     <img class="image" src="https://i.postimg.cc/g0kZKXBk/shutterstock-373266265.png" alt="image">
@@ -118,7 +115,7 @@
   <footer class="footer">
     <div class="container">
       <div class="row">
-        <div class="w-100 col-3">
+        <div class="w-100 col-lg-3 col-sm-6">
           <h6 class="footer-title"> O nas </h6>
           <ul class="links">
             <li><a href="#"> Strona główna </a></li>
@@ -128,7 +125,7 @@
             <li><a href="#"> Kariera </a></li>
           </ul>
         </div>
-        <div class="w-100 col-3">
+        <div class="w-100 col-lg-3 col-sm-6">
           <h6 class="footer-title"> Ubezpieczenia </h6>
           <ul class="links">
             <li><a href="#"> Ubezpieczenia mienia, nieruchomości </a></li>
@@ -138,7 +135,7 @@
             <li><a href="#"> Zobacz pełną ofertę </a> </li>
           </ul>
         </div>
-        <div class="w-100 col-3">
+        <div class="w-100 col-lg-3 col-sm-6">
           <h6 class="footer-title"> Pomoc </h6>
           <ul class="links">
             <li><a href="#"> Oddziały/Kontakt </a></li>
@@ -148,7 +145,7 @@
             <li><a href="#"> Polityka cookies </a></li>
           </ul>
         </div>
-        <div class="w-100 col-3">
+        <div class="w-100 col-lg-3 col-sm-6">
           <h6 class="footer-title"> Infolinia </h6>
           <p class="phone-number"> +48 22 311 1234</p>
         </div>
@@ -156,6 +153,7 @@
     </div>
   </footer>
 
+<script src="js/script.js"></script>
 </body>
 
 </html>

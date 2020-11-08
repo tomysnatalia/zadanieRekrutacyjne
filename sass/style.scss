@@ -13,13 +13,12 @@ $font-text: 'Lato', sans-serif;
 body {
   margin: 0;
   font-size: 16px;
-  line-height: 1.7;
+  //line-height: 1.7;
   text-align: center;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: normal;
 }
-
-// section {
-//   padding: 96px 0;
-// }
 
 .container {
   max-width: 1290px;
@@ -43,7 +42,6 @@ body {
   border-width: 2px;
   transition: all 1s;
   color: #ffffff;
-  font-family: $font-title;
   font-size: 17px;
   font-weight: 700;
   line-height: 21px;
@@ -73,7 +71,7 @@ body {
   align-self: flex-end;
 }
 
-.nav a {
+.nav ul a {
   width: 64px;
   height: 30px;
   color: $color-blue;
@@ -126,9 +124,23 @@ body {
   text-align: center;
 }
 
+.nav ul i {
+  display: none;
+}
+
 .nav ul ul a:hover {
   color: #ffffff;
 }
+
+.mobile-nav-icon {
+  color: $color-blue;
+  font-size: 40px;
+}
+
+.mobile-nav {
+  display: none;
+}
+
 
 /* Splash */
 .splash {
@@ -153,7 +165,6 @@ body {
   text-align: left;
   font-style: normal;
   letter-spacing: normal;
-  line-height: normal;
   margin-bottom: 8px;
 }
 
@@ -169,10 +180,8 @@ body {
   text-align: left;
   font-style: normal;
   letter-spacing: normal;
-  font-style: normal;
-  letter-spacing: normal;
-  line-height: normal;
 }
+
 .inner-container {
   max-width: 1290px;
   padding: 0 20px 0 20px;
@@ -333,9 +342,6 @@ input::placeholder {
   letter-spacing: normal;
   line-height: 68px;
   text-align: left;
-  font-style: normal;
-  letter-spacing: normal;
-  line-height: normal;
   margin-bottom: 0;
 }
 
@@ -350,16 +356,40 @@ input::placeholder {
   letter-spacing: normal;
   line-height: 40px;
   text-align: left;
-  font-style: normal;
-  letter-spacing: normal;
-  line-height: normal;
   margin-top: 8px;
-  margin-bottom: auto;
+  margin-bottom: 8px;
 }
 
 .btn-two {
   width: 280px;
   height: 56px;
+  color: #ffffff;
+  font-family: Quicksand;
+  font-size: 17px;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: 21px;
+  padding: 16px;
+
+}
+
+.box p {
+  color: #161616;
+  font-family: $font-text;
+  font-size: 17px;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: 28px;
+  text-align: left;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.bolded-text {
+
+  font-weight: 700;
 }
 
 /* Footer */
@@ -379,10 +409,6 @@ input::placeholder {
   text-align: left;
   font-style: normal;
   letter-spacing: normal;
-  line-height: 26px;
-  font-style: normal;
-  letter-spacing: normal;
-  line-height: normal;
   margin-bottom: 15px;
 }
 
@@ -422,9 +448,189 @@ input::placeholder {
   font-style: normal;
   letter-spacing: normal;
   text-align: left;
-  font-style: normal;
-  letter-spacing: normal;
-  line-height: normal;
 }
 
+/* Media */
+@media (max-width: 450px) {
+  .text-container {
+    top: 29%;
+    width: 344px;
+    right: 35px;
+  }
 
+  .about {
+    height: auto;
+  }
+
+  .image {
+    height: 35%;
+    }
+}
+
+@media (max-width: 767px){
+  .mobile-nav {
+    display: inline-block;
+    overflow: hidden;
+    align-self: center;
+  }
+
+  .nav ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    top: 20%;
+    text-align: center;
+    background: $color-blue;
+    width: 100%;
+    z-index: 2;
+  }
+
+  .nav ul a {
+    color: white;
+    width: 100%;
+  }
+
+  .nav li {
+    margin: 0;
+    padding: 10px 0;
+    color: white;
+    float: none;
+    text-align: center;
+    display: flex;
+  }
+
+  .nav ul i {
+    display: inline;
+  }
+
+  .nav ul li ul {
+    width: 100%;
+    transform: translateX(-50%);
+    padding-top: 12px;
+    margin-top: 0;
+    background-color: $color-orange;
+    z-index: 2;
+    border-radius: 10px;
+    margin-top: 40px;
+  }
+
+  .nav li a:hover ul {
+    display: none;
+  }
+
+
+  .container{
+    max-width: 100%;
+  }
+
+  .page-title {
+    font-size: 25px;
+    width: 100%;
+  }
+
+  .page-subtitle {
+    font-size: 18px;
+    text-align: left;
+    width: 100%;
+  }
+
+  .splash {
+    display: flex;
+    height: 900px;
+    width: 100%;
+  }
+
+  .inner-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .splash-inner {
+    height: auto;
+  }
+
+  .text-container {
+    top: 29%;
+    width: 340px;
+  }
+
+  .text-container-subtitle {
+    margin-left: 20px;
+    font-size: 20px;
+  }
+
+  .text-container p {
+    width: 240px;
+    height: auto;
+    font-size: 9px;
+    height: auto;
+  }
+
+  input {
+    width: 276px;
+    height: 38px;
+  }
+
+  [type="checkbox"] {
+    width: 10px;
+    height: 10px;
+  }
+
+  [id="postCode"] {
+    width: 120px;
+    height: 38px;
+  }
+
+  [id="city"] {
+    width: 146px;
+    height: 38px;
+    margin-right: 5px;
+  }
+
+  .list {
+    padding: 0 32px;
+  }
+
+  .about {
+    height: auto;
+    width: 100%;
+  }
+
+  .image {
+    height: 35%;
+    }
+
+  .box {
+    width: 100%;
+    }
+
+  .section-title {
+    width: 100%;
+    font-size: 25px;
+  }
+
+  .section-subtitle {
+    font-size: 18px;
+  }
+
+  .about .container {
+    height: 500px;
+  }
+
+  .box p {
+    font-size: 13px;
+  }
+
+  .btn-two {
+    width: 150px;
+    height: 37px;
+    font-size: 12px;
+    padding: 7px;
+  }
+
+  .footer {
+    height: auto;
+  }
+}
